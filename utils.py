@@ -62,3 +62,15 @@ def lcm(a, b):
     """
     return a * b // gcd(a, b)
 
+def divisors(n, include_n = False):
+    """
+    Returns the divisors of a number. Can opt to remove n from the list 
+    """
+    result = []
+    for i in range(1, int(n**0.5)+1):
+        if n % i == 0:
+            result.append(i)
+            result.append(n//i)
+    if not include_n:
+        result.remove(n)
+    return result
