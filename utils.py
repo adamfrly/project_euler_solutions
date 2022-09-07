@@ -74,3 +74,22 @@ def divisors(n, include_n = False):
     if not include_n:
         result.remove(n)
     return result
+
+def factorial(x: int) -> int:
+    """
+    Returns the factorial of x
+    """
+    total = 1
+    for i in range(0, x):
+        total = total * (i + 1)
+    return total
+
+def sfd(x: int, b: int) -> int:
+    """
+    Returns the sum of the factorial of the digits in base b.
+    """
+    total = 0
+    while x > 0:
+        total = total + factorial(x % b)
+        x = x // b
+    return total
