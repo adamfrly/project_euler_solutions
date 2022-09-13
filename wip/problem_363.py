@@ -14,7 +14,7 @@ p_3 = (0, 1)
 bezier_points = [p_0, p_1, p_2, p_3]
 
 def error_percentage(length):
-    return 100 * (length - math.pi) / math.pi
+    return 100 * (length - math.pi / 2) / math.pi / 2
 
 def bezier(points, t):
     return points[0] * (1 - t) ** 3 + 3 * (1 - t) ** 2 * t * points[1] + 3 * (1 - t) * t ** 2 * points[2] + points[3] * t ** 3
