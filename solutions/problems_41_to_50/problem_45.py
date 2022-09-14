@@ -1,6 +1,7 @@
 # Find the next triangle number that is also pentagonal and hexagonal after 40755
 
 # I chose to look at the first 100000 numbers arbitratily and so this is really just a brute force soltuion, it could be optimized greatly
+# All hexagonal number are also triangular numbers, so you probably don't need to calculate the tri nums
 
 def first_n_tri_num(n):
     return [int(0.5*i*(i + 1)) for i in range(1, n + 1)]
