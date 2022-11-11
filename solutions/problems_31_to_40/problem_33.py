@@ -1,3 +1,5 @@
+# Find the four cases where you can naively "cross cancel" digits in a 2 digit by 2 digit fraction to get the right answer
+
 candidates = []
 
 for i in range(1, 10):

@@ -1,3 +1,5 @@
+# Find how many ways 2 pounds can be made using any number of coins
+
 def count_change(coins, n, sum):
     if (sum == 0):
         return 1

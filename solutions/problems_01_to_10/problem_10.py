@@ -1,3 +1,5 @@
+# Find the sum of all primes below 2 million
+
 def is_prime(n):
     if n == 1:
         return False

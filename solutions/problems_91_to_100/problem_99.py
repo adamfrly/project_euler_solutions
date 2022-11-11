@@ -1,3 +1,5 @@
+# Find the number in this list where row[0]^row[1] is the greatest
+
 nums = [[519432,525806],
         [632382,518061],
         [78864,613712],

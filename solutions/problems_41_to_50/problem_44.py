@@ -1,3 +1,5 @@
+# Find two pentagonal numbers whose sum and difference are pentagonal and whose difference is minimal amongst all other such pairs
+
 import math
 
 def p(n):
