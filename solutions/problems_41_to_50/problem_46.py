@@ -19,11 +19,16 @@ def primes_sieve(limit):
     return primes
 
 primes = primes_sieve(500000)
+cands = list(range(9, 500000, 2))
 
-for i in range(9, 500001, 2):
-    for j in range(1, i):
+for cand in cands:
+    found = False
+    if cand in primes:
         found = True
-        if (i - 2 * j * j) in primes:
-            found = False
-        if found:
-            print(i)
+    else:
+        for num in range(1, cand):
+            if (cand - 2 * num * num) in primes:
+                found = True
+                break
+    if not found:
+        print(cand)
