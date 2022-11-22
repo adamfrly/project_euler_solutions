@@ -16,3 +16,5 @@ print("n: {:.25f}".format(n))
 print(n/N*(n-1)/(N-1)) # Approximation is very close
 
 print(756872327473/1070379110497*(756872327473-1)/(1070379110497-1)) # Plugging in closest numbers
+
+# Apparently this is meant to be a diophantine equation problem lol

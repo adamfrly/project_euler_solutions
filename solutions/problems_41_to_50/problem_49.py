@@ -1,4 +1,4 @@
-from itertools import combinations
+from itertools import permutations
 
 
 def primes_sieve(limit):
@@ -34,14 +34,12 @@ def is_prime(n):
 
 primes = primes_sieve(9999)
 
+primes = list(filter(lambda prime: prime >= 1000, primes))
+
 for prime in primes:
-    prime_perms = list(combinations(list(str(prime))))
-    results = []
-    for perm in prime_perms:
-        candidate = int("".join(perm))
-        if is_prime(candidate) and len(str(candidate)) == 4:
-            results.append(candidate)
-            
-    if len(results) >= 3:
-        print(results)
+    prime_perms = [int("".join(x)) for x  in list(permutations(list(str(prime))))]
+    prime_1 = prime + 3330
+    prime_2 = prime + 6660
+    if is_prime(prime_1) and is_prime(prime_2) and prime_1 in prime_perms and prime_2 in prime_perms:
+        print(prime, prime_1, prime_2)
 
